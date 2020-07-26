@@ -1,8 +1,8 @@
 library sort_price;
 
-String sortPrice(num number) {
+String sortPrice(num number, [bool decimals = true]) {
 
-  if (number % 1 != 0) number = number.toDouble();
+  if (number % 1 == 0) number = number.toDouble();
 
   String fullNumber = '';
 
@@ -74,11 +74,50 @@ String sortPrice(num number) {
         subString(intNumber, 6);
     
       break;
+
+    case 10:
+
+      fullNumber =
+        subString(intNumber, 0, 1) + 
+        ',' +
+        subString(intNumber, 1, 4) + 
+        ',' +
+        subString(intNumber, 4, 7) + 
+        ',' +
+        subString(intNumber, 7);
+    
+      break;
+
+    case 11:
+
+      fullNumber =
+        subString(intNumber, 0, 2) + 
+        ',' +
+        subString(intNumber, 2, 5) + 
+        ',' +
+        subString(intNumber, 5, 8) + 
+        ',' +
+        subString(intNumber, 8);
+    
+      break;
+
+    case 12:
+
+      fullNumber =
+        subString(intNumber, 0, 3) + 
+        ',' +
+        subString(intNumber, 3, 6) + 
+        ',' +
+        subString(intNumber, 6, 9) + 
+        ',' +
+        subString(intNumber, 9);
+    
+      break;
       
     default: fullNumber = intNumber;
   }
 
-  fullNumber = fullNumber + '.' + decimal;
+  if(decimals) fullNumber = fullNumber + '.' + decimal;
 
   return fullNumber;
 }
