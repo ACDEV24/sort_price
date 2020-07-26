@@ -8,8 +8,14 @@ Recieve a number and return an String
 
 # Example
 
-sortPrice(1000.0);
+sortPrice(1000);
 
 This will to return: 1,000.0
 
 Suports long numbers
+
+If you want number without decimals, just send a false value like second argument
+
+# Ej:
+
+sortPrice(1000, false)
