@@ -1,7 +1,8 @@
 name: sort_price
 description: This is a simple package who can help you to sort your price number from a number to unit, ten, hundreds and thousands
-version: 0.0.1
-author: Andrés Carrillo <andresdavidcm24@gmail.com>
+version: 0.0.2
+authors:
+  - andresdavidcm24@gmail.com
 homepage: https://github.com/AndresC17/sort_price
 
 environment:
