@@ -101,5 +101,5 @@ String sortPrice(num number, [bool decimals = true]) {
   return fullNumber;
 }
 
-String subString(String number, [int start, int end]) =>
-    number.substring(start, end);
+String subString(String number, [int? start, int? end]) =>
+    number.substring(start!, end);
